@@ -2,9 +2,12 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { ContactEmailHtml } from "@/lib/email-template";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Force this route to always be dynamic (never statically analyzed at build)
+export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest) {
+  // Initialise lazily so build-time static analysis never touches it
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const body = await req.json();
     const { name, email, company, message } = body;
