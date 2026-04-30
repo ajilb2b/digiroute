@@ -32,11 +32,11 @@ export default function Footer() {
           <div className="foot-col">
             <h5>Services</h5>
             <ul>
-              <li><Link href="#services">Last-Mile Delivery</Link></li>
-              <li><Link href="#services">Rider Outsourcing</Link></li>
-              <li><Link href="#services">Fleet Management</Link></li>
-              <li><Link href="#services">Commercial Logistics</Link></li>
-              <li><Link href="#platform">Dispatch Platform</Link></li>
+              <li><Link href="/services">Last-Mile Delivery</Link></li>
+              <li><Link href="/services">Rider Outsourcing</Link></li>
+              <li><Link href="/services">Fleet Management</Link></li>
+              <li><Link href="/services">Commercial Logistics</Link></li>
+              <li><Link href="/platform">Dispatch Platform</Link></li>
             </ul>
           </div>
 
@@ -45,9 +45,9 @@ export default function Footer() {
             <ul>
               <li><Link href="#">About Us</Link></li>
               <li><Link href="#">Admin Login</Link></li>
-              <li><Link href="#driver">Become a Driver</Link></li>
+              <li><Link href="/driver">Become a Driver</Link></li>
               <li><Link href="#">Careers</Link></li>
-              <li><Link href="#contact">Contact</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
 

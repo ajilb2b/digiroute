@@ -212,6 +212,55 @@ h1.hero-h em {
 .signal-lbl { font-family: var(--font-jetbrains), 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted-2); text-transform: uppercase; letter-spacing: 0.12em; margin-top: 6px; }
 
 /* =====================================================
+   PAGE BANNER — shared inner-page hero
+   ===================================================== */
+.page-banner {
+  position: relative;
+  padding: 160px 0 80px;
+  background: #F9F8FE;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.page-banner-grid {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(91,33,240,0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 70% 100% at 20% 50%, #000 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 100% at 20% 50%, #000 30%, transparent 100%);
+  pointer-events: none;
+}
+.page-banner-orb {
+  position: absolute; width: 480px; height: 480px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(91,33,240,0.12), transparent 70%);
+  top: -160px; right: -80px; pointer-events: none;
+}
+.page-banner-crumb {
+  display: flex; align-items: center; gap: 6px;
+  font-family: var(--font-jetbrains), monospace; font-size: 11px;
+  color: var(--muted-2); text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 24px; position: relative; z-index: 2;
+}
+.page-banner-crumb a { color: var(--muted-2); transition: color 0.2s; }
+.page-banner-crumb a:hover { color: var(--violet); }
+.page-banner-crumb span { color: var(--violet); font-weight: 600; }
+.page-banner-h1 {
+  font-size: clamp(40px, 5.5vw, 80px);
+  line-height: 1.0; letter-spacing: -0.04em; font-weight: 700;
+  color: var(--ink); margin: 18px 0 22px; max-width: 18ch;
+  position: relative; z-index: 2;
+}
+.page-banner-h1 em {
+  font-family: var(--font-fraunces), serif; font-style: italic; font-weight: 500;
+  background: linear-gradient(115deg, #2E0A8A 0%, #5B21F0 60%, #7C3FF7 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-variation-settings: "opsz" 144;
+}
+.page-banner-sub {
+  font-size: clamp(16px, 1.4vw, 19px); color: var(--muted);
+  max-width: 56ch; line-height: 1.65; position: relative; z-index: 2;
+}
+
+/* =====================================================
    HERO — NEW PROFESSIONAL SPLIT LAYOUT
    ===================================================== */
 .hero-new {

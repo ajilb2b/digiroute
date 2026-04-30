@@ -27,3 +27,5 @@ npm-debug.log*
 
 # Scripts (internal tooling only)
 scripts/
+
+.vercel

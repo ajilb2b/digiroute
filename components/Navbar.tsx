@@ -19,16 +19,16 @@ export default function Navbar() {
 
         {/* Nav links */}
         <div className="nav-links">
-          <Link href="#services">Services</Link>
-          <Link href="#platform">Platform</Link>
-          <Link href="#industries">Industries</Link>
-          <Link href="#contact">Contact</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/platform">Platform</Link>
+          <Link href="/industries">Industries</Link>
+          <Link href="/contact">Contact</Link>
         </div>
 
         {/* CTAs */}
         <div className="nav-cta">
-          <Link href="#driver" className="btn btn-ghost">Become a Driver</Link>
-          <Link href="#contact" className="btn btn-orange">
+          <Link href="/driver" className="btn btn-ghost">Become a Driver</Link>
+          <Link href="/contact" className="btn btn-orange">
             Get Quote
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14M13 5l7 7-7 7" />
