@@ -23,7 +23,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DigiRoute — Powering Your Delivery Success | Last-Mile Logistics in the GCC",
+  title: "DigiRoute",
   description:
     "DigiRoute delivers last-mile excellence across Qatar and the UAE. Rider outsourcing, fleet management, dispatch software, and end-to-end commercial logistics — built for modern commerce.",
 };
