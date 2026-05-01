@@ -19,6 +19,7 @@ export default function Navbar() {
 
         {/* Nav links */}
         <div className="nav-links">
+          <Link href="/">Home</Link>
           <Link href="/services">Services</Link>
           <Link href="/platform">Platform</Link>
           <Link href="/industries">Industries</Link>
