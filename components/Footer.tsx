@@ -44,19 +44,9 @@ export default function Footer() {
             <h5>Company</h5>
             <ul>
               <li><Link href="#">About Us</Link></li>
-              <li><Link href="#">Admin Login</Link></li>
               <li><Link href="/driver">Become a Driver</Link></li>
               <li><Link href="#">Careers</Link></li>
               <li><Link href="/contact">Contact</Link></li>
-            </ul>
-          </div>
-
-          <div className="foot-col">
-            <h5>Resources</h5>
-            <ul>
-              <li><Link href="#">API Documentation</Link></li>
-              <li><Link href="#">Case Studies</Link></li>
-              <li><Link href="#">Press Kit</Link></li>
               <li><Link href="#">Privacy Policy</Link></li>
               <li><Link href="#">Terms of Service</Link></li>
             </ul>
