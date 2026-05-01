@@ -1062,6 +1062,8 @@ footer .container { position: relative; z-index: 2; }
 .foot-col a:hover { color: #fff; }
 .foot-bottom { padding-top: 30px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 .foot-bottom p { font-family: var(--font-jetbrains), 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.04em; }
+.powered-by-link { color: rgba(255,255,255,0.65); text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+.powered-by-link:hover { color: #fff; }
 .foot-social { display: flex; gap: 10px; }
 .foot-social a { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); transition: all 0.2s ease; }
 .foot-social a:hover { background: var(--orange); color: #fff; border-color: var(--orange); transform: translateY(-2px); }
