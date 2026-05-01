@@ -32,13 +32,15 @@ export default function TrustBar() {
         <div className="marquee-track">
           {track.map((b, i) => (
             <div key={i} className="logo-card" title={b.name}>
-              <Image
-                src={`/brands/${b.file}`}
-                alt={b.name}
-                width={160}
-                height={66}
-                style={{ maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto", objectFit: "contain" }}
-              />
+              <div style={{ position: "relative", width: "100%", height: "100%" }}>
+                <Image
+                  src={`/brands/${b.file}`}
+                  alt={b.name}
+                  fill
+                  style={{ objectFit: "contain" }}
+                  sizes="160px"
+                />
+              </div>
             </div>
           ))}
         </div>
