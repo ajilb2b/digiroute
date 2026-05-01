@@ -32,10 +32,10 @@ export default function Footer() {
           <div className="foot-col">
             <h5>Services</h5>
             <ul>
-              <li><Link href="/services">Last-Mile Delivery</Link></li>
-              <li><Link href="/services">Rider Outsourcing</Link></li>
-              <li><Link href="/services">Fleet Management</Link></li>
-              <li><Link href="/services">Commercial Logistics</Link></li>
+              <li><Link href="/services#last-mile">Last-Mile Delivery</Link></li>
+              <li><Link href="/services#rider-outsourcing">Rider Outsourcing</Link></li>
+              <li><Link href="/services#fleet-management">Fleet Management</Link></li>
+              <li><Link href="/services#commercial-logistics">Commercial Logistics</Link></li>
               <li><Link href="/platform">Dispatch Platform</Link></li>
             </ul>
           </div>
@@ -43,12 +43,12 @@ export default function Footer() {
           <div className="foot-col">
             <h5>Company</h5>
             <ul>
-              <li><Link href="#">About Us</Link></li>
+              <li><Link href="/about">About Us</Link></li>
               <li><Link href="/driver">Become a Driver</Link></li>
-              <li><Link href="#">Careers</Link></li>
+              <li><Link href="/careers">Careers</Link></li>
               <li><Link href="/contact">Contact</Link></li>
-              <li><Link href="#">Privacy Policy</Link></li>
-              <li><Link href="#">Terms of Service</Link></li>
+              <li><Link href="/privacy">Privacy Policy</Link></li>
+              <li><Link href="/terms">Terms of Service</Link></li>
             </ul>
           </div>
         </div>

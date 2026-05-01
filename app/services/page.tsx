@@ -20,6 +20,7 @@ const services = [
   {
     num: "01",
     cls: "l1",
+    id: "last-mile",
     title: "Last-Mile Delivery",
     tagline: "Fast, trackable, doorstep-perfect.",
     desc: "Our last-mile network is engineered for the final — and most critical — leg of the delivery journey. Powered by real-time route optimization, live GPS tracking, and automated customer notifications, we guarantee every parcel arrives on time with full proof of delivery.",
@@ -36,6 +37,7 @@ const services = [
   {
     num: "02",
     cls: "l2",
+    id: "rider-outsourcing",
     title: "Rider Outsourcing",
     tagline: "Scale headcount without the overhead.",
     desc: "Access a fully vetted, trained, and uniformed rider force on your terms. Whether you need five riders for a weekend campaign or a permanent squad of fifty, DigiRoute absorbs the recruitment, training, insurance, and compliance burden — you just scale.",
@@ -52,6 +54,7 @@ const services = [
   {
     num: "03",
     cls: "l3",
+    id: "fleet-management",
     title: "Fleet Management",
     tagline: "Every vehicle. Every kilometre. Under control.",
     desc: "End-to-end fleet operations wrapped into a single accountable contract. Live telemetry, scheduled maintenance, fuel cost controls, driver scoring, and monthly performance reports — all surfaced through our operations console or exported to your BI tooling.",
@@ -68,6 +71,7 @@ const services = [
   {
     num: "04",
     cls: "l4",
+    id: "commercial-logistics",
     title: "Commercial Logistics",
     tagline: "One contract. Full supply-chain coverage.",
     desc: "From receiving dock to consumer doorstep — DigiRoute bundles warehousing, distribution, B2B fulfilment, and last-mile delivery under a single SLA. Eliminate vendor fragmentation and gain complete inventory visibility across every node in your supply chain.",
@@ -102,7 +106,7 @@ export default function ServicesPage() {
             <div className="layer-stack">
               {services.map((s) => (
                 <RevealWrapper key={s.num}>
-                  <div className={`layer-row ${s.cls}`}>
+                  <div id={s.id} className={`layer-row ${s.cls}`}>
                     <div className="layer-num">{s.num}</div>
                     <div className="layer-body" style={{ flex: 1 }}>
                       <h3>{s.title}</h3>
