@@ -1,18 +1,21 @@
+import Image from "next/image";
+
 const brands = [
-  { name: "KeeTa",          cat: "Food Delivery" },
-  { name: "Careem",         cat: "Ride-hailing & Delivery" },
-  { name: "noon",           cat: "E-commerce" },
-  { name: "Amazon",         cat: "Global Commerce" },
-  { name: "LuLu",          cat: "Hypermarket Chain" },
-  { name: "Carrefour",      cat: "Retail Supermarket" },
-  { name: "Papa Johns",     cat: "Quick Service Restaurant" },
-  { name: "McDonald's",     cat: "Quick Service Restaurant" },
-  { name: "Pizza Hut",      cat: "Quick Service Restaurant" },
-  { name: "Ninja",          cat: "Logistics & Delivery" },
-  { name: "iMile",          cat: "Cross-border Logistics" },
-  { name: "W Pharmacy",     cat: "Health & Pharmacy" },
-  { name: "Diet Delights",  cat: "Meal Plans" },
-  { name: "Temu",           cat: "Global Marketplace" },
+  { name: "KeeTa",           file: "keeta.webp" },
+  { name: "Careem",          file: "careem.png" },
+  { name: "noon",            file: "noon.jpg" },
+  { name: "W Pharmacy",      file: "w-pharmacy.jpg" },
+  { name: "Amazon",          file: "amazon.webp" },
+  { name: "Papa Johns",      file: "papa-johns.jpg" },
+  { name: "Temu",            file: "temu.png" },
+  { name: "iMile",           file: "imile.png" },
+  { name: "Diet Delights",   file: "diet-delights.png" },
+  { name: "Rare Group",      file: "rare-group.webp" },
+  { name: "LuLu Hypermarket",file: "lulu-hypermarket.png" },
+  { name: "Carrefour",       file: "carrefour.webp" },
+  { name: "Pizza Hut",       file: "pizza-hut.png" },
+  { name: "McDonald's",      file: "mcdonald-s.png" },
+  { name: "Ninja",           file: "ninja.png" },
 ];
 
 // Duplicate for seamless infinite loop
@@ -29,10 +32,13 @@ export default function TrustBar() {
         <div className="marquee-track">
           {track.map((b, i) => (
             <div key={i} className="logo-card" title={b.name}>
-              <div className="logo-card-inner">
-                <span className="logo-name">{b.name}</span>
-                <span className="logo-cat">{b.cat}</span>
-              </div>
+              <Image
+                src={`/brands/${b.file}`}
+                alt={b.name}
+                width={160}
+                height={66}
+                style={{ maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto", objectFit: "contain" }}
+              />
             </div>
           ))}
         </div>
