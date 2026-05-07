@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
 import RevealWrapper from "@/components/RevealWrapper";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Careers",
+  description:
+    "Join DigiRoute and help build the future of last-mile logistics in Qatar and the UAE. Explore career opportunities across operations, technology, and commercial roles.",
+  alternates: { canonical: "https://www.digiroute.me/careers" },
+  openGraph: { url: "https://www.digiroute.me/careers" },
+};
 
 const perks = [
   {

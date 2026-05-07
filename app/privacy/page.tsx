@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Read DigiRoute's Privacy Policy to understand how we collect, use, and protect your personal data in connection with our website, client portal, and rider app.",
+  alternates: { canonical: "https://www.digiroute.me/privacy" },
+  openGraph: { url: "https://www.digiroute.me/privacy" },
+};
 
 const sections = [
   {

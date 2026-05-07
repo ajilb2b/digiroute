@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
 import Contact from "@/components/Contact";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with DigiRoute. Reach our offices in Doha, Qatar or Dubai, UAE for delivery partnerships, platform demos, or general enquiries.",
+  alternates: { canonical: "https://www.digiroute.me/contact" },
+  openGraph: { url: "https://www.digiroute.me/contact" },
+};
 
 export default function ContactPage() {
   return (

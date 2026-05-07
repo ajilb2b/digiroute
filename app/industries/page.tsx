@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
 import RevealWrapper from "@/components/RevealWrapper";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Industries We Serve",
+  description:
+    "DigiRoute powers last-mile delivery for food delivery, retail, supermarkets, e-commerce, healthcare, and more across Qatar and the UAE.",
+  alternates: { canonical: "https://www.digiroute.me/industries" },
+  openGraph: { url: "https://www.digiroute.me/industries" },
+};
 
 const industries = [
   {

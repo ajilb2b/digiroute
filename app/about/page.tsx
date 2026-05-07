@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
 import RevealWrapper from "@/components/RevealWrapper";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Founded in Doha in 2018, DigiRoute is a GCC-born logistics company with 500+ active riders, 2.8M+ deliveries completed, and offices in Qatar and the UAE.",
+  alternates: { canonical: "https://www.digiroute.me/about" },
+  openGraph: { url: "https://www.digiroute.me/about" },
+};
 
 const values = [
   {

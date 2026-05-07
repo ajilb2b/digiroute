@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
+
+export const metadata: Metadata = {
+  title: "DigiRoute — Last-Mile Logistics for Qatar & UAE",
+  description:
+    "DigiRoute delivers last-mile excellence across Qatar and the UAE. Rider outsourcing, fleet management, dispatch software, and end-to-end commercial logistics — built for modern commerce.",
+  alternates: { canonical: "https://www.digiroute.me" },
+  openGraph: { url: "https://www.digiroute.me" },
+};
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import Services from "@/components/Services";

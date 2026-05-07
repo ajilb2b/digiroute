@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://digiroute.me";
+const BASE_URL = "https://www.digiroute.me";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

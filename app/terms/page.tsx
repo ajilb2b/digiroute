@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description:
+    "Review DigiRoute's Terms of Service governing use of our website, logistics platform, and rider network across Qatar and the UAE.",
+  alternates: { canonical: "https://www.digiroute.me/terms" },
+  openGraph: { url: "https://www.digiroute.me/terms" },
+};
 
 const sections = [
   {

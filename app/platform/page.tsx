@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
 import RevealWrapper from "@/components/RevealWrapper";
 import FeaturesGrid from "@/components/FeaturesGrid";
+
+export const metadata: Metadata = {
+  title: "Platform",
+  description:
+    "The DigiRoute platform gives you real-time fleet visibility, automated dispatch, driver tracking, and analytics — all in one dashboard built for GCC logistics.",
+  alternates: { canonical: "https://www.digiroute.me/platform" },
+  openGraph: { url: "https://www.digiroute.me/platform" },
+};
 import Link from "next/link";
 
 const sideItems = [

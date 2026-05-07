@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageBanner from "@/components/PageBanner";
 import RevealWrapper from "@/components/RevealWrapper";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "DigiRoute offers rider outsourcing, dedicated fleet management, white-label dispatch software, and full-service commercial logistics across Qatar and the UAE.",
+  alternates: { canonical: "https://www.digiroute.me/services" },
+  openGraph: { url: "https://www.digiroute.me/services" },
+};
 
 const ArrowIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
