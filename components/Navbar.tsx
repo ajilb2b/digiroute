@@ -10,10 +10,10 @@ export default function Navbar() {
           <Image
             src="/digiroute-logo-transparent.png"
             alt="DigiRoute Logistics Services W.L.L"
-            width={200}
-            height={100}
+            width={1558}
+            height={427}
             priority
-            style={{ height: "72px", width: "auto", objectFit: "contain", marginTop: "8px" }}
+            style={{ height: "44px", width: "auto", objectFit: "contain" }}
           />
         </Link>
 

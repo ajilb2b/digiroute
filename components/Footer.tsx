@@ -12,10 +12,10 @@ export default function Footer() {
               <Image
                 src="/digiroute-logo-transparent.png"
                 alt="DigiRoute Logistics Services W.L.L"
-                width={200}
-                height={100}
+                width={1558}
+                height={427}
                 style={{
-                  height: "72px",
+                  height: "44px",
                   width: "auto",
                   objectFit: "contain",
                   filter: "brightness(0) invert(1)",
