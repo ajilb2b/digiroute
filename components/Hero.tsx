@@ -1,140 +1,166 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
+const slides = [
+  {
+    title: "DigiRoute",
+    tagline: "LAST-MILE LOGISTICS",
+    description:
+      "Professional last-mile delivery, rider outsourcing, fleet management, and end-to-end commercial logistics — engineered for modern businesses across Qatar and the UAE.",
+    cta: "Get a Quote",
+    href: "#contact",
+  },
+  {
+    title: "Fleet Ready",
+    tagline: "RIDERS & FLEET MANAGEMENT",
+    description:
+      "Vetted, trained riders and a managed fleet scaled to your delivery volume — on demand, every day.",
+    cta: "Explore Services",
+    href: "#services",
+  },
+  {
+    title: "Live Dispatch",
+    tagline: "REAL-TIME VISIBILITY",
+    description:
+      "One dispatch platform with live tracking, smart routing and proof of delivery for every drop.",
+    cta: "See the Platform",
+    href: "/platform",
+  },
+];
+
 export default function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [showText, setShowText] = useState(false);
+  const [showBottom, setShowBottom] = useState(false);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    setShowText(false);
+    setShowBottom(false);
+    const timer = setTimeout(() => setShowText(true), 100);
+    return () => clearTimeout(timer);
+  }, [currentSlide]);
+
+  useEffect(() => {
+    if (!showText) return;
+    const timer = setTimeout(() => setShowBottom(true), 1200);
+    return () => clearTimeout(timer);
+  }, [showText]);
+
+  const slide = slides[currentSlide];
+
   return (
-    <section className="hero-new">
-      {/* Subtle dot grid background */}
-      <div className="hero-new-dots" />
+    <section className="rh">
+      <div className="rh-grid" />
 
-      <div className="hero-new-inner">
-        {/* ── LEFT COLUMN ── */}
-        <div className="hero-new-left">
-          <h1 className="hero-new-h1">
-            Powering Your<br />
-            <em>Delivery Success</em>
-          </h1>
-
-          <p className="hero-new-sub">
-            Professional last-mile delivery, rider outsourcing, fleet management,
-            and end-to-end commercial logistics — engineered for modern businesses
-            across Qatar and the UAE.
-          </p>
-
-          <div className="hero-new-actions">
-            <Link href="#contact" className="hero-new-btn-primary">
-              Get a Quote
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M13 5l7 7-7 7" />
-              </svg>
-            </Link>
-            <Link href="#services" className="hero-new-btn-ghost">
-              How it works
-            </Link>
+      {/* Slide visuals */}
+      <div className="rh-visuals">
+        {currentSlide === 2 && (
+          <div className="rh-geo">
+            <div className="rh-ring rh-ring-1" />
+            <div className="rh-ring rh-ring-2" />
+            <div className="rh-ring rh-ring-3" />
+            <div className="rh-ring rh-ring-4" />
           </div>
+        )}
+      </div>
 
-          <div className="hero-new-stats">
-            <div className="hero-new-stat">
-              <span className="hero-new-stat-num">99.8%</span>
-              <span className="hero-new-stat-lbl">On-Time Delivery</span>
-            </div>
-            <div className="hero-new-stat-divider" />
-            <div className="hero-new-stat">
-              <span className="hero-new-stat-num">500+</span>
-              <span className="hero-new-stat-lbl">Active Riders</span>
-            </div>
-            <div className="hero-new-stat-divider" />
-            <div className="hero-new-stat">
-              <span className="hero-new-stat-num">50K+</span>
-              <span className="hero-new-stat-lbl">Daily Deliveries</span>
-            </div>
-            <div className="hero-new-stat-divider" />
-            <div className="hero-new-stat">
-              <span className="hero-new-stat-num">24/7</span>
-              <span className="hero-new-stat-lbl">Live Support</span>
-            </div>
+      {/* Side decorations */}
+      <div className={`rh-side rh-side-l ${showText ? "on" : ""}`}>
+        <div className="rh-side-line" />
+        <span className="rh-side-text rh-side-text-l">Delivery First</span>
+        <div className="rh-side-line" />
+      </div>
+      <div className={`rh-side rh-side-r ${showText ? "on" : ""}`}>
+        <div className="rh-side-line" />
+        <span className="rh-side-text">Qatar &amp; UAE</span>
+        <div className="rh-side-line" />
+      </div>
+
+      {/* Floating glass cards */}
+      <div className={`rh-card rh-card-l ${showText ? "on" : ""}`}>
+        <div className="rh-card-in">
+          <div className="rh-card-ic">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12l5 5L20 7" />
+            </svg>
+          </div>
+          <div>
+            <div className="rh-card-t">99.8% On-Time</div>
+            <div className="rh-card-s">Delivery Rate</div>
           </div>
         </div>
-
-        {/* ── RIGHT COLUMN — Dispatch Visual ── */}
-        <div className="hero-new-right">
-          <div className="dispatch-card">
-
-            {/* Floating: Live badge */}
-            <div className="dc-float dc-float-live">
-              <span className="dc-live-dot" />
-              Live · Doha North Zone
-            </div>
-
-            {/* Floating: On-Time chip */}
-            <div className="dc-float dc-float-ontime">
-              <span className="dc-ontime-icon">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12l5 5L20 7" />
-                </svg>
-              </span>
-              98.4% On-Time
-            </div>
-
-            {/* Map area */}
-            <div className="dc-map">
-              <div className="dc-map-grid" />
-              <svg className="dc-roads" viewBox="0 0 520 420" preserveAspectRatio="xMidYMid slice">
-                {/* Water */}
-                <path className="dc-water" d="M0,340 C90,325 200,370 310,355 C400,343 480,375 520,360 L520,420 L0,420 Z" />
-                {/* Major roads */}
-                <path className="dc-road-w" d="M-10,160 C110,148 240,188 390,172 C460,165 500,182 530,178" />
-                <path className="dc-road-w" d="M260,-10 C268,70 248,150 272,240 C296,320 262,390 280,430" />
-                <path className="dc-road" d="M-10,255 L530,240" />
-                <path className="dc-road" d="M-10,82 L530,96" />
-                <path className="dc-road" d="M140,-10 L148,430" />
-                <path className="dc-road" d="M410,-10 L425,340" />
-                <path className="dc-road" d="M55,240 C130,284 210,272 272,308 C346,348 442,336 510,362" />
-                {/* Animated delivery routes */}
-                <path className="dc-route" d="M108,128 C162,148 218,184 264,210 C310,236 352,218 386,236" />
-                <path className="dc-route-2" d="M264,210 C238,264 214,290 180,326 C152,354 124,362 100,378" />
-                <path className="dc-route" d="M264,210 C310,192 352,156 388,128 C416,110 452,118 470,136" />
-              </svg>
-
-              {/* Hub & pins */}
-              <div className="dc-pin dc-pin-hub" style={{ left: "50.5%", top: "50%" }}>H</div>
-              <div className="dc-pin" style={{ left: "21%", top: "30%" }}>A</div>
-              <div className="dc-pin dc-pin-o" style={{ left: "34.5%", top: "50%" }}>B</div>
-              <div className="dc-pin" style={{ left: "19%", top: "76%" }}>C</div>
-              <div className="dc-pin dc-pin-o" style={{ left: "74%", top: "30%" }}>D</div>
-              <div className="dc-pin" style={{ left: "90%", top: "32%" }}>E</div>
-              <div className="dc-pin dc-pin-o" style={{ left: "34%", top: "72%" }}>F</div>
-            </div>
-
-            {/* Bottom stat strip */}
-            <div className="dc-stat-strip">
-              <div className="dc-strip-item">
-                <span className="dc-strip-num">12</span>
-                <span className="dc-strip-lbl">Active Routes</span>
-              </div>
-              <div className="dc-strip-sep" />
-              <div className="dc-strip-item">
-                <span className="dc-strip-num">214</span>
-                <span className="dc-strip-lbl">In Transit</span>
-              </div>
-              <div className="dc-strip-sep" />
-              <div className="dc-strip-item">
-                <span className="dc-strip-num">2,847</span>
-                <span className="dc-strip-lbl">Today&apos;s Drops</span>
-              </div>
-            </div>
-
+      </div>
+      <div className={`rh-card rh-card-r ${showText ? "on" : ""}`}>
+        <div className="rh-card-in">
+          <div className="rh-card-ic">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 21c0-4 4-7 8-7s8 3 8 7" />
+            </svg>
           </div>
-
-          {/* Floating driver mini-card */}
-          <div className="hero-driver-card">
-            <div className="hdc-av">AM</div>
-            <div className="hdc-info">
-              <div className="hdc-name">Ahmed M.</div>
-              <div className="hdc-meta">Route 04 · 8 stops</div>
-            </div>
-            <span className="hdc-badge">Live</span>
+          <div>
+            <div className="rh-card-t">500+ Riders</div>
+            <div className="rh-card-s">Active Fleet</div>
           </div>
         </div>
+      </div>
+
+      {/* Main carousel */}
+      <div className="rh-main">
+        <div className="rh-slides">
+          {slides.map((s, index) => (
+            <div key={index} className={`rh-slide ${currentSlide === index ? "active" : ""}`}>
+              <h1 className="rh-title">
+                {s.title.split(" ").map((word, wi) => (
+                  <span key={wi} className="rh-word">
+                    {word.split("").map((char, ci) => (
+                      <span
+                        key={ci}
+                        className={`rh-char ${currentSlide === index && showText ? "show" : ""}`}
+                        style={{ transitionDelay: `${ci * 50}ms` }}
+                      >
+                        {char}
+                      </span>
+                    ))}
+                  </span>
+                ))}
+              </h1>
+              <h2 className={`rh-tagline ${currentSlide === index && showText ? "show" : ""}`}>{s.tagline}</h2>
+            </div>
+          ))}
+        </div>
+
+        <div className={`rh-bottom ${showBottom ? "show" : ""}`}>
+          <p className="rh-desc">{slide.description}</p>
+          <Link href={slide.href} className="rh-cta">
+            {slide.cta}
+          </Link>
+        </div>
+      </div>
+
+      {/* Progress indicators */}
+      <div className="rh-dots">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            aria-label={`Slide ${index + 1}`}
+            onClick={() => setCurrentSlide(index)}
+            className="rh-dot"
+            style={{ width: currentSlide === index ? 64 : 16 }}
+          >
+            {currentSlide === index && <span className="rh-dot-fill" />}
+            <span className="rh-dot-hover" />
+          </button>
+        ))}
       </div>
     </section>
   );

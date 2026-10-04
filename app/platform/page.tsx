@@ -270,7 +270,7 @@ export default function PlatformPage() {
 
         {/* CTA */}
         <RevealWrapper>
-          <section style={{ background: "linear-gradient(135deg,#1a0060 0%,#2d0099 50%,#1a0060 100%)", padding: "80px 0", textAlign: "center" }}>
+          <section style={{ background: "linear-gradient(135deg,oklch(0.22 0.06 45) 0%,oklch(0.35 0.11 45) 50%,oklch(0.22 0.06 45) 100%)", padding: "80px 0", textAlign: "center" }}>
             <div className="container">
               <div style={{ maxWidth: 560, margin: "0 auto" }}>
                 <div className="section-tag" style={{ justifyContent: "center", marginBottom: 20 }}>See it live</div>

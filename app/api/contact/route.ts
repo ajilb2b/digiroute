@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
       to:   email,
       subject: "We received your message — DigiRoute",
       html: `
-        <div style="font-family:'Segoe UI',Arial,sans-serif;max-width:520px;margin:0 auto;padding:40px 20px;color:#0E1530;">
+        <div style="font-family:'Segoe UI',Arial,sans-serif;max-width:520px;margin:0 auto;padding:40px 20px;color:#040609;">
           <h2 style="font-size:22px;font-weight:700;margin:0 0 16px;">Thanks, ${name}!</h2>
           <p style="font-size:15px;color:#4B5563;line-height:1.65;margin:0 0 12px;">
             We've received your message and a member of our commercial team will get back to you within one working day.

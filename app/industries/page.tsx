@@ -29,7 +29,7 @@ const industries = [
       "Multi-restaurant batch stacking",
       "Live order tracking for end customers",
     ],
-    color: "#FF6B35",
+    color: "oklch(0.58 0.18 45)",
   },
   {
     icon: (
@@ -46,7 +46,7 @@ const industries = [
       "Campaign surge handling (sale events, launches)",
       "Proof of delivery with photo confirmation",
     ],
-    color: "#7C3AED",
+    color: "oklch(0.5 0.16 45)",
   },
   {
     icon: (
@@ -64,7 +64,7 @@ const industries = [
       "Fragile item handling protocols",
       "Real-time slot management integration",
     ],
-    color: "#059669",
+    color: "oklch(0.65 0.16 55)",
   },
   {
     icon: (
@@ -81,7 +81,7 @@ const industries = [
       "Returns & reverse logistics management",
       "White-label tracking page per brand",
     ],
-    color: "#0EA5E9",
+    color: "oklch(0.4 0.1 45)",
   },
 ];
 
@@ -206,7 +206,7 @@ export default function IndustriesPage() {
 
         {/* CTA */}
         <RevealWrapper>
-          <section style={{ background: "linear-gradient(135deg,#1a0060 0%,#2d0099 50%,#1a0060 100%)", padding: "80px 0", textAlign: "center" }}>
+          <section style={{ background: "linear-gradient(135deg,oklch(0.22 0.06 45) 0%,oklch(0.35 0.11 45) 50%,oklch(0.22 0.06 45) 100%)", padding: "80px 0", textAlign: "center" }}>
             <div className="container">
               <div style={{ maxWidth: 580, margin: "0 auto" }}>
                 <div className="section-tag" style={{ justifyContent: "center", marginBottom: 20 }}>Your industry. Our expertise.</div>

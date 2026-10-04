@@ -12,7 +12,7 @@ export default function DriverApp() {
       <div className="container">
         <RevealWrapper>
           <div className="split reverse">
-            <div className="visual-card" style={{ aspectRatio: "1.05/1", display: "flex", alignItems: "center", justifyContent: "center", background: "linear-gradient(140deg,#5B21F0 0%,#2E0A8A 100%)" }}>
+            <div className="visual-card" style={{ aspectRatio: "1.05/1", display: "flex", alignItems: "center", justifyContent: "center", background: "linear-gradient(140deg,oklch(0.58 0.18 45) 0%,oklch(0.35 0.11 45) 100%)" }}>
               <div className="phone-frame">
                 <div className="phone-notch" />
                 <div className="phone-screen">

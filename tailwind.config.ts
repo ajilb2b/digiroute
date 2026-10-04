@@ -9,33 +9,33 @@ const config: Config = {
     extend: {
       colors: {
         violet: {
-          DEFAULT: "#5B21F0",
-          2: "#4516C7",
-          3: "#2E0A8A",
-          4: "#1A0658",
-          soft: "#F4F0FF",
+          DEFAULT: "oklch(0.58 0.18 45)",
+          2: "oklch(0.5 0.16 45)",
+          3: "oklch(0.35 0.11 45)",
+          4: "oklch(0.22 0.06 45)",
+          soft: "oklch(0.96 0.02 45)",
         },
         orange: {
-          DEFAULT: "#F97316",
-          2: "#EA580C",
-          soft: "#FFF1E6",
+          DEFAULT: "oklch(0.58 0.18 45)",
+          2: "oklch(0.5 0.16 45)",
+          soft: "oklch(0.96 0.02 45)",
         },
         ink: {
-          DEFAULT: "#0E1530",
-          2: "#1A2247",
-          3: "#2A3568",
+          DEFAULT: "oklch(0.12 0.01 265)",
+          2: "oklch(0.2 0.02 265)",
+          3: "oklch(0.28 0.03 265)",
         },
         paper: {
           DEFAULT: "#FFFFFF",
-          2: "#FBFBFE",
-          3: "#F5F4FB",
-          4: "#EBE9F7",
+          2: "oklch(0.985 0.004 265)",
+          3: "oklch(0.96 0.01 265)",
+          4: "oklch(0.92 0.01 265)",
         },
       },
       fontFamily: {
-        sans: ["var(--font-jakarta)", "sans-serif"],
-        serif: ["var(--font-fraunces)", "serif"],
-        mono: ["var(--font-jetbrains)", "monospace"],
+        sans: ["var(--font-outfit)", "sans-serif"],
+        serif: ["var(--font-outfit)", "sans-serif"],
+        mono: ["var(--font-outfit)", "sans-serif"],
       },
       keyframes: {
         fadeUp: {

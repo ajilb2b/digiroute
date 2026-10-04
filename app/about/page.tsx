@@ -104,7 +104,7 @@ export default function AboutPage() {
                 <div>
                   <div className="section-tag" style={{ marginBottom: 20 }}>Our Mission</div>
                   <h2 style={{ fontSize: "2.2rem", fontWeight: 800, color: "var(--ink)", lineHeight: 1.2, marginBottom: 24 }}>
-                    Making every delivery a<br /><em style={{ fontStyle: "italic", color: "var(--violet)" }}>kept promise.</em>
+                    Making every delivery a<br /><em style={{ color: "var(--violet)" }}>kept promise.</em>
                   </h2>
                   <p style={{ color: "var(--muted)", fontSize: "1rem", lineHeight: 1.75, marginBottom: 16 }}>
                     DigiRoute was founded in Doha with one clear conviction: that last-mile logistics in the GCC deserved better. Better technology, better accountability, and a partner that understood the region — not one reading from a global playbook.
@@ -173,7 +173,7 @@ export default function AboutPage() {
               <div style={{ textAlign: "center", marginBottom: 56 }}>
                 <div className="section-tag" style={{ justifyContent: "center", marginBottom: 16 }}>Leadership</div>
                 <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "var(--ink)" }}>
-                  The team behind<br /><em style={{ fontStyle: "italic", color: "var(--violet)" }}>DigiRoute.</em>
+                  The team behind<br /><em style={{ color: "var(--violet)" }}>DigiRoute.</em>
                 </h2>
               </div>
             </RevealWrapper>
@@ -183,7 +183,7 @@ export default function AboutPage() {
                   <div key={m.name} style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 16, padding: "32px 24px", textAlign: "center" }}>
                     <div style={{
                       width: 72, height: 72, borderRadius: "50%", margin: "0 auto 16px",
-                      background: m.bg ? "linear-gradient(135deg,var(--orange),#c05a00)" : "linear-gradient(135deg,var(--violet),#3a1a80)",
+                      background: m.bg ? "linear-gradient(135deg,var(--orange),oklch(0.5 0.16 45))" : "linear-gradient(135deg,var(--violet),oklch(0.35 0.11 45))",
                       display: "flex", alignItems: "center", justifyContent: "center",
                       color: "#fff", fontSize: "1.3rem", fontWeight: 800, letterSpacing: "-0.02em",
                     }}>
@@ -205,7 +205,7 @@ export default function AboutPage() {
               <div style={{ textAlign: "center", marginBottom: 56 }}>
                 <div className="section-tag" style={{ justifyContent: "center", marginBottom: 16 }}>Our Offices</div>
                 <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "var(--ink)" }}>
-                  Rooted in the<br /><em style={{ fontStyle: "italic", color: "var(--violet)" }}>GCC.</em>
+                  Rooted in the<br /><em style={{ color: "var(--violet)" }}>GCC.</em>
                 </h2>
               </div>
             </RevealWrapper>
@@ -229,7 +229,7 @@ export default function AboutPage() {
 
         {/* CTA */}
         <RevealWrapper>
-          <section style={{ background: "linear-gradient(135deg,#1a0060 0%,#2d0099 50%,#1a0060 100%)", padding: "80px 0", textAlign: "center" }}>
+          <section style={{ background: "linear-gradient(135deg,oklch(0.22 0.06 45) 0%,oklch(0.35 0.11 45) 50%,oklch(0.22 0.06 45) 100%)", padding: "80px 0", textAlign: "center" }}>
             <div className="container">
               <div style={{ maxWidth: 560, margin: "0 auto" }}>
                 <h2 style={{ color: "#fff", fontSize: "2.2rem", fontWeight: 800, marginBottom: 16, lineHeight: 1.2 }}>

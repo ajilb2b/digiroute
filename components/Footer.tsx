@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="foot-bottom">
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             <p>© 2026 DigiRoute Logistics Services W.L.L · Doha, Qatar &amp; Dubai, UAE · All rights reserved</p>
-            <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.4)", fontFamily: "var(--font-jetbrains),'JetBrains Mono',monospace", letterSpacing: "0.04em" }}>
+            <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.4)", letterSpacing: "0.04em" }}>
               Powered by{" "}
               <a href="https://www.ajilb2b.com" target="_blank" rel="noopener noreferrer" className="powered-by-link">
                 Ajil Logistics Services

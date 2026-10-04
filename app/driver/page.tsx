@@ -171,7 +171,7 @@ export default function DriverPage() {
               <div style={{ textAlign: "center", marginBottom: 64 }}>
                 <div className="section-tag" style={{ justifyContent: "center", marginBottom: 16 }}>How it works</div>
                 <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "var(--ink)" }}>
-                  On the road in <em style={{ fontStyle: "italic", color: "var(--violet)" }}>four simple steps.</em>
+                  On the road in <em style={{ color: "var(--violet)" }}>four simple steps.</em>
                 </h2>
               </div>
             </RevealWrapper>
